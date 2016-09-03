@@ -9,23 +9,59 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet private weak var btn: UIButton!
     @IBOutlet private weak var resultLbl: UILabel!
+    @IBOutlet weak var historyLbl: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    @IBAction func btnPressed(_ sender: AnyObject) {
+    private var userInTheMiddleOfTyping = false
+    
+    private var brain = CalculatorBrain()
+    
+    @IBAction func digitPressed(_ sender: UIButton) {
+        let digit = sender.currentTitle!
+        if userInTheMiddleOfTyping {
+            if sender.currentTitle! == "."{
+                if !resultLbl.text!.contains(".") {
+                    appendDigit(digit)
+                }
+            } else {
+                appendDigit(digit)
+            }
+        } else {
+            resultLbl.text = digit
+        }
+        userInTheMiddleOfTyping = true
     }
     
+    func appendDigit(_ digit: String) {
+        let textCurrentlyInDisplay = resultLbl.text!
+        resultLbl.text = textCurrentlyInDisplay + digit
+    }
     
+    var displayValue: Double {
+        get {
+            return Double(resultLbl.text!)!
+        } set {
+            resultLbl.text = String(newValue)
+        }
+    }
+    
+    @IBAction func operationBtnPressed(_ sender: UIButton) {
+        if resultLbl.text != "." {
+            if userInTheMiddleOfTyping {
+                brain.setOperand(operand: displayValue)
+                userInTheMiddleOfTyping = false
+            }
+            if let mathSym = sender.currentTitle {
+                brain.performOperation(symbol: mathSym)
+            }
+            displayValue = brain.result
+        } else {
+            brain.performOperation(symbol: "C")
+            displayValue = 0.0
+            historyLbl.text = "History"
+            print(brain.description)
+        }
+    }
 }
-

@@ -23,7 +23,7 @@
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="krV-O3-eKg">
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Ixe-2Y-YoM">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Ixe-2Y-YoM">
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="rF8-h9-uZt"/>
@@ -44,7 +44,7 @@
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SrZ-VW-Pzr">
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eJ-sO-dOQ">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eJ-sO-dOQ" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="×"/>
@@ -52,7 +52,7 @@
                                                             <action selector="operationBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6GD-33-8PG"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfO-aD-TOW">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfO-aD-TOW" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="÷"/>
@@ -60,7 +60,7 @@
                                                             <action selector="operationBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mMo-vL-0KB"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPo-eQ-3kM">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPo-eQ-3kM" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="−"/>
@@ -68,7 +68,7 @@
                                                             <action selector="operationBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Efb-Wq-BlD"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUT-id-7Mz">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUT-id-7Mz" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="+"/>
@@ -76,7 +76,7 @@
                                                             <action selector="operationBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cdH-s1-v6E"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hle-uD-Bcy">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hle-uD-Bcy" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="C"/>
@@ -86,9 +86,45 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CyT-1p-09j">
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnm-Md-3Wl" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
+                                                        <color key="backgroundColor" red="1" green="0.99465603300000005" blue="0.47106758069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                        <state key="normal" title="x²"/>
+                                                        <connections>
+                                                            <action selector="operationBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DhE-R5-JMf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkO-68-Ssj" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
+                                                        <color key="backgroundColor" red="1" green="0.99465603300000005" blue="0.47106758069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                        <state key="normal" title="x³"/>
+                                                        <connections>
+                                                            <action selector="operationBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mcG-7d-yK8"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-S2-ZfC" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
+                                                        <color key="backgroundColor" red="1" green="0.99465603300000005" blue="0.47106758069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                        <state key="normal" title="x!"/>
+                                                        <connections>
+                                                            <action selector="operationBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GJ9-5E-VFS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTi-dc-aD1" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
+                                                        <color key="backgroundColor" red="1" green="0.99465603300000005" blue="0.47106758069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                        <state key="normal" title="1/x"/>
+                                                        <connections>
+                                                            <action selector="operationBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3V2-zV-U8A"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SrI-6Z-tGD">
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqp-SR-tFi">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqp-SR-tFi" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="1" green="0.99465603300000005" blue="0.47106758069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="π"/>
@@ -96,7 +132,7 @@
                                                             <action selector="operationBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qRf-3r-tbf"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0T-Vx-GVx">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0T-Vx-GVx" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="0.94891661405563354" green="0.94907897710800171" blue="0.94890636205673218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="7"/>
@@ -104,7 +140,7 @@
                                                             <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GXC-jV-rxx"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B81-Rn-Bpz">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B81-Rn-Bpz" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="8"/>
@@ -112,7 +148,7 @@
                                                             <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2AB-Bb-nTn"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZS-3r-qb0">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZS-3r-qb0" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="9"/>
@@ -124,7 +160,7 @@
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yLW-mb-nbC">
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUQ-jU-SEb">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUQ-jU-SEb" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="1" green="0.99465603300000005" blue="0.47106758069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="√"/>
@@ -132,7 +168,7 @@
                                                             <action selector="operationBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gt1-D3-Xvu"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VK7-eh-YR9">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VK7-eh-YR9" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="4"/>
@@ -140,7 +176,7 @@
                                                             <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BBs-RP-k3y"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbt-yu-a9n">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbt-yu-a9n" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="5"/>
@@ -148,7 +184,7 @@
                                                             <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PF6-aX-zH8"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="422-wl-qmE">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="422-wl-qmE" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="6"/>
@@ -160,7 +196,7 @@
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lco-dg-zmt">
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35o-49-veV">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35o-49-veV" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="1" green="0.99465603300000005" blue="0.47106758069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="ℯ"/>
@@ -168,7 +204,7 @@
                                                             <action selector="operationBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sYR-iE-Xc1"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnR-Cx-ua7">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnR-Cx-ua7" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="1"/>
@@ -176,7 +212,7 @@
                                                             <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WU6-Fa-xFw"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9h-cS-ILS">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9h-cS-ILS" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="2"/>
@@ -184,7 +220,7 @@
                                                             <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mxf-nv-xSk"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eU-X6-hlH">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eU-X6-hlH" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="3"/>
@@ -196,7 +232,7 @@
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QdA-kD-s3d">
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw5-wR-qQW">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw5-wR-qQW" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="0.33455753326416016" green="0.99218219518661499" blue="0.47021615505218506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <state key="normal" title="±"/>
@@ -204,15 +240,15 @@
                                                             <action selector="operationBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dWB-6f-6NK"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbY-Cw-Llz">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbY-Cw-Llz" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                        <state key="normal" title="."/>
+                                                        <state key="normal" title=","/>
                                                         <connections>
-                                                            <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p16-DS-kJh"/>
+                                                            <action selector="commaPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0hA-G6-NR7"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sg5-hW-Yyp">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sg5-hW-Yyp" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="0"/>
@@ -220,7 +256,7 @@
                                                             <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I8x-W1-HvM"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLt-YA-yGd">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLt-YA-yGd" customClass="Button" customModule="StanfordCalculator" customModuleProvider="target">
                                                         <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="="/>
@@ -244,9 +280,33 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btn" destination="sg5-hW-Yyp" id="vFf-an-IDx"/>
+                        <outlet property="btn" destination="Hle-uD-Bcy" id="eE4-Gy-cm0"/>
+                        <outlet property="changeSign" destination="fw5-wR-qQW" id="yLL-MC-OIw"/>
+                        <outlet property="comma" destination="wbY-Cw-Llz" id="02U-iq-8fy"/>
+                        <outlet property="cubic" destination="mkO-68-Ssj" id="wly-BK-YFn"/>
+                        <outlet property="divide" destination="BfO-aD-TOW" id="Cv7-fJ-riW"/>
+                        <outlet property="eight" destination="B81-Rn-Bpz" id="sbM-7T-Hxc"/>
+                        <outlet property="equals" destination="iLt-YA-yGd" id="fOE-B0-n27"/>
+                        <outlet property="factorial" destination="NI3-S2-ZfC" id="ubB-z0-SUC"/>
+                        <outlet property="five" destination="gbt-yu-a9n" id="n3p-6f-mOv"/>
+                        <outlet property="four" destination="VK7-eh-YR9" id="gwW-WK-8vb"/>
                         <outlet property="historyLbl" destination="tgN-bg-d3F" id="tkd-3Q-wwV"/>
+                        <outlet property="invert" destination="cTi-dc-aD1" id="9Ek-5f-ABp"/>
+                        <outlet property="minus" destination="JPo-eQ-3kM" id="Sw9-n0-XZT"/>
+                        <outlet property="multiply" destination="5eJ-sO-dOQ" id="agw-xX-NIA"/>
+                        <outlet property="nepero" destination="35o-49-veV" id="ZcF-r9-JZh"/>
+                        <outlet property="nine" destination="WZS-3r-qb0" id="ZCR-uc-Q8B"/>
+                        <outlet property="one" destination="cnR-Cx-ua7" id="lfE-T4-icg"/>
+                        <outlet property="pi" destination="Iqp-SR-tFi" id="gbb-no-UIW"/>
+                        <outlet property="plus" destination="aUT-id-7Mz" id="IRU-6U-ra7"/>
                         <outlet property="resultLbl" destination="Ixe-2Y-YoM" id="iCq-dp-RYq"/>
+                        <outlet property="seven" destination="P0T-Vx-GVx" id="SOV-E4-Ipv"/>
+                        <outlet property="six" destination="422-wl-qmE" id="l9O-XL-Zrw"/>
+                        <outlet property="squareRoot" destination="MUQ-jU-SEb" id="Z6p-er-oQr"/>
+                        <outlet property="squared" destination="Jnm-Md-3Wl" id="VUh-WH-Jgw"/>
+                        <outlet property="three" destination="1eU-X6-hlH" id="qFI-sd-8aT"/>
+                        <outlet property="two" destination="l9h-cS-ILS" id="R1Q-Fh-lja"/>
+                        <outlet property="zero" destination="sg5-hW-Yyp" id="DfU-s1-S1a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

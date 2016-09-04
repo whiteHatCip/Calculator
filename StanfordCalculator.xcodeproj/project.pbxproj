@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D6B97771D7BC60F00F7F408 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B97761D7BC60F00F7F408 /* RoundedCorners.swift */; };
+		8D6B97791D7BC8D200F7F408 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B97781D7BC8D200F7F408 /* Button.swift */; };
 		8D76593C1D7AD7AF00D32D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D76593B1D7AD7AF00D32D39 /* AppDelegate.swift */; };
 		8D76593E1D7AD7AF00D32D39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D76593D1D7AD7AF00D32D39 /* ViewController.swift */; };
 		8D7659411D7AD7AF00D32D39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D76593F1D7AD7AF00D32D39 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D6B97761D7BC60F00F7F408 /* RoundedCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		8D6B97781D7BC8D200F7F408 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		8D7659381D7AD7AF00D32D39 /* StanfordCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StanfordCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D76593B1D7AD7AF00D32D39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D76593D1D7AD7AF00D32D39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				8D7659441D7AD7AF00D32D39 /* LaunchScreen.storyboard */,
 				8D7659471D7AD7AF00D32D39 /* Info.plist */,
 				8D76594D1D7AD9E500D32D39 /* CalculatorBrain.swift */,
+				8D6B97761D7BC60F00F7F408 /* RoundedCorners.swift */,
+				8D6B97781D7BC8D200F7F408 /* Button.swift */,
 			);
 			path = StanfordCalculator;
 			sourceTree = "<group>";
@@ -140,9 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D6B97791D7BC8D200F7F408 /* Button.swift in Sources */,
 				8D76594E1D7AD9E500D32D39 /* CalculatorBrain.swift in Sources */,
 				8D76593E1D7AD7AF00D32D39 /* ViewController.swift in Sources */,
 				8D76593C1D7AD7AF00D32D39 /* AppDelegate.swift in Sources */,
+				8D6B97771D7BC60F00F7F408 /* RoundedCorners.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +312,7 @@
 				8D76594C1D7AD7AF00D32D39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -11,7 +11,7 @@ import UIKit
 protocol RoundedCorners {}
 extension RoundedCorners where Self: UIButton {
 
-    func roundCornersAndDropShadow() {
+    func roundCornersAndDropShadow(){
         layer.cornerRadius = 3.5
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.7

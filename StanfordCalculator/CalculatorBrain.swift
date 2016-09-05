@@ -8,17 +8,12 @@
 
 import Foundation
 
-func factorial(op: Int) -> Double {
+func factorial(op: Double) -> Double {
+    
     if op<=1 {
         return 1
     }
-    var operand = op
-    var result = op
-    repeat {
-        result = result*(operand-1)
-        operand+=(-1)
-    } while (operand>1)
-    return Double(result)
+    return op * factorial(op: op-1.0)
 }
 
 
@@ -42,7 +37,7 @@ class CalculatorBrain {
     }
     private var pending: pendingBinaryOperationInfo?
     
-    struct pendingBinaryOperationInfo {
+    private struct pendingBinaryOperationInfo {
         var binaryFunction: (Double, Double) -> Double
         var firstOperand: Double
     }
@@ -50,7 +45,7 @@ class CalculatorBrain {
     private var operations: Dictionary<String, Operation> = [
         "x²" : Operation.UnaryOperation({$0*$0}),
         "x³" : Operation.UnaryOperation({pow($0, 3)}) ,
-        "x!" : Operation.Factorial({factorial(op: $0)}),
+        "x!" : Operation.UnaryOperation({factorial(op: $0)}),
         "1/x" : Operation.UnaryOperation({1/$0}),
         "π" : Operation.Constant(M_PI),
         "ℯ" : Operation.Constant(M_E),
@@ -73,7 +68,6 @@ class CalculatorBrain {
         case BinaryOperation((Double, Double) -> Double)
         case Equals
         case Clear
-        case Factorial((Int)->Double)
     }
     
     func setOperand(operand: Double) {
@@ -94,13 +88,11 @@ class CalculatorBrain {
                 executePendingBinaryOperation()
             case .Clear:
                 clear()
-            case .Factorial(let function):
-                accumulator = function(Int(accumulator))
             }
         }
     }
     
-    func clear() {
+    private func clear() {
         accumulator = 0.0
         pending = nil
         resetHistory()

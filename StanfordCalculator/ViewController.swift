@@ -11,47 +11,90 @@ import Foundation
 
 class ViewController: UIViewController {
     
+    // MARK: @IBOutlets
     @IBOutlet private weak var btn: Button!
     @IBOutlet private weak var resultLbl: UILabel!
-    @IBOutlet weak var historyLbl: UILabel!
+    @IBOutlet private weak var historyLbl: UILabel!
+    @IBOutlet private weak var invert: Button!
+    @IBOutlet private weak var factorial: Button!
+    @IBOutlet private weak var cubic: Button!
+    @IBOutlet private weak var squared: Button!
+    @IBOutlet private weak var comma: Button!
+    @IBOutlet private weak var equals: Button!
+    @IBOutlet private weak var zero: Button!
+    @IBOutlet private weak var three: Button!
+    @IBOutlet private weak var two: Button!
+    @IBOutlet private weak var one: Button!
+    @IBOutlet private weak var six: Button!
+    @IBOutlet private weak var five: Button!
+    @IBOutlet private weak var four: Button!
+    @IBOutlet private weak var nine: Button!
+    @IBOutlet private weak var eight: Button!
+    @IBOutlet private weak var seven: Button!
+    @IBOutlet private weak var changeSign: Button!
+    @IBOutlet private weak var nepero: Button!
+    @IBOutlet private weak var squareRoot: Button!
+    @IBOutlet private weak var pi: Button!
+    @IBOutlet private weak var multiply: Button!
+    @IBOutlet private weak var divide: Button!
+    @IBOutlet private weak var minus: Button!
+    @IBOutlet private weak var plus: Button!
     
-    @IBOutlet weak var invert: Button!
-    @IBOutlet weak var factorial: Button!
-    @IBOutlet weak var cubic: Button!
-    @IBOutlet weak var squared: Button!
-    @IBOutlet weak var comma: Button!
-    @IBOutlet weak var equals: Button!
-    @IBOutlet weak var zero: Button!
-    @IBOutlet weak var three: Button!
-    @IBOutlet weak var two: Button!
-    @IBOutlet weak var one: Button!
-    @IBOutlet weak var six: Button!
-    @IBOutlet weak var five: Button!
-    @IBOutlet weak var four: Button!
-    @IBOutlet weak var nine: Button!
-    @IBOutlet weak var eight: Button!
-    @IBOutlet weak var seven: Button!
-    @IBOutlet weak var changeSign: Button!
-    @IBOutlet weak var nepero: Button!
-    @IBOutlet weak var squareRoot: Button!
-    @IBOutlet weak var pi: Button!
-    @IBOutlet weak var multiply: Button!
-    @IBOutlet weak var divide: Button!
-    @IBOutlet weak var minus: Button!
-    @IBOutlet weak var plus: Button!
+    // MARK: Private properties
     private var userInTheMiddleOfTyping = false
-    
     private var brain = CalculatorBrain()
     
+    // MARK: Properties
+    var displayValue: Double? {
+        get {
+            if let value = resultLbl.text!.doubleValue {
+                return value
+            } else if let value2 = resultLbl.text!.replacingOccurrences(of: ".", with: ",").doubleValue{
+                return value2
+            } else {
+                return nil
+            }
+        } set {
+            if newValue != nil {
+                let newValueStr = String(describing: newValue!)
+                if checkIfValueIsInteger(value: newValue){
+                    resultLbl.text = newValueStr.replacingOccurrences(of: ".0", with: "")
+                } else {
+                    resultLbl.text = newValueStr
+                }
+            } else {
+                resultLbl.text = "0"
+            }
+        }
+    }
+    
+    // MARK: UI setup
     override func viewDidLoad() {
         updateUIElementsAppearance()
     }
     
-    @IBAction func commaPressed(_ sender: Button) {
+    // MARK: @IBActions
+    @IBAction private func backspacePressed() {
+        if userInTheMiddleOfTyping {
+            var str = "\(resultLbl.text!)"
+            if str.characters.count>1 {
+                str = String(str.characters.dropLast())
+                if str.doubleValue != nil {
+                    displayValue! = str.doubleValue!
+                } else if str.replacingOccurrences(of: ".", with: ",").doubleValue != nil {
+                    displayValue! = str.doubleValue!
+                }
+            } else {
+                clearHistory()
+            }
+        }
+    }
+    
+    @IBAction private func commaPressed(_ sender: Button) {
         let digit = sender.currentTitle!
         if userInTheMiddleOfTyping {
             if !resultLbl.text!.contains(digit) {
-                appendDigit(".")
+                appendDigit(digit)
             }
         } else {
             resultLbl.text = "0."
@@ -59,73 +102,56 @@ class ViewController: UIViewController {
         userInTheMiddleOfTyping = true
     }
     
-    @IBAction func digitPressed(_ sender: UIButton) {
+    @IBAction private func digitPressed(_ sender: UIButton) {
         let digit = sender.currentTitle!
-        // Check if the user already inserted some digits. If not, set the resultLbl text to the digit inserted, otherwise append the digit to those already inserted
         if userInTheMiddleOfTyping {
             appendDigit(digit)
         } else {
             resultLbl.text = digit
         }
-        // User enters in "MiddleOfTyping" mode
         userInTheMiddleOfTyping = true
     }
     
-    func appendDigit(_ digit: String) {
+    @IBAction private func operationBtnPressed(_ sender: UIButton) {
+        if userInTheMiddleOfTyping {
+            brain.setOperand(operand: displayValue!)
+            userInTheMiddleOfTyping = false
+        }
+        if let mathSym = sender.currentTitle {
+            brain.performOperation(symbol: mathSym)
+        }
+        roundResult(result: "\(brain.result)")
+    }
+    
+    // MARK: Functions
+    private func appendDigit(_ digit: String) {
         let textCurrentlyInDisplay = resultLbl.text!
         resultLbl.text = textCurrentlyInDisplay + digit
     }
     
-    var displayValue: Double? {
-        get {
-            if let value = resultLbl.text!.replacingOccurrences(of: ".", with: ",").doubleValue {
-                return value
-            } else {
-                return nil
-            }
-        } set {
-            if newValue != nil {
-                resultLbl.text = "\(newValue!)"
-            } else {
-                resultLbl.text = "0"
-            }
-        }
-    }
-    
-    @IBAction func operationBtnPressed(_ sender: UIButton) {
-        // If the user just pressed the . button, no operation is allowed. All brain values and labels are restored
-        if resultLbl.text != "," {
-            if userInTheMiddleOfTyping {
-                // Save the value visible in resultLbl inside the brain accumulator
-                brain.setOperand(operand: displayValue!)//Double(resultLbl.text!)!)
-                // Once the user presses an operation button, exit "MiddleOfTyping" mode
-                userInTheMiddleOfTyping = false
-            }
-            // Perform selected operation
-            if let mathSym = sender.currentTitle {
-                brain.performOperation(symbol: mathSym)
-            }
-            // Checking if the decimal part of the result of the operation is 0, so that the .0 part of the double value is removed from the resultLbl
-            let integerPart = Int(brain.result)
-            if (Double(integerPart) - brain.result) == 0 {
-                resultLbl.text = String(Int(brain.result))
-            } else {
-                // Display the result rounding the fractional part with 6 decimal digits
-                displayValue = brain.result.roundToPlaces(places: 6)
-            }
-        } else {
-            brain.performOperation(symbol: "C")
-            clearHistory()
-            print(brain.description)
-        }
-    }
-    
-    func clearHistory() {
-        displayValue = 0
+    private func clearHistory() {
+        displayValue = 0.0
         historyLbl.text = "History"
+        userInTheMiddleOfTyping = false
     }
     
-    func updateUIElementsAppearance() {
+    private func roundResult(result: String) {
+        if let y = result.doubleValue?.roundToPlaces(places: 6) {
+            displayValue = y
+        } else if let x = result.replacingOccurrences(of: ".", with: ",").doubleValue?.roundToPlaces(places: 6) {
+            displayValue = x
+        }
+    }
+    
+    private func checkIfValueIsInteger(value: Double?) -> Bool{
+        let str = String(describing: value!).substring(from: String(describing: value!).index(String(describing: value!).endIndex, offsetBy: -2))
+        if str == ".0" {
+            return true
+        }
+        return false
+    }
+    
+    private func updateUIElementsAppearance() {
         btn.roundCornersAndDropShadow()
         plus.roundCornersAndDropShadow()
         minus.roundCornersAndDropShadow()
@@ -156,9 +182,11 @@ class ViewController: UIViewController {
         resultLbl.layer.shadowOffset = CGSize.zero
         resultLbl.layer.shadowRadius = 5
     }
+    
 }
 
-extension String {
+// MARK: String Extension
+private extension String {
     struct Formatter {
         static let instance = NumberFormatter()
     }
